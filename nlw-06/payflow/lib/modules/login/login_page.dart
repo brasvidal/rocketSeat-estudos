@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/modules/home/home_page.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
@@ -37,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
                   height: 300,
                 )),
             Positioned(
-                bottom: size.height * .14,
+                bottom: size.height * .10,
                 left: 0,
                 right: 0,
                 child: Column(
@@ -59,7 +60,9 @@ class _LoginPageState extends State<LoginPage> {
                           const EdgeInsets.only(left: 40, right: 40, top: 40),
                       child: SocialLoginButton(
                         onTap: () {
-                          print('Clicou');
+                        //navegação temporária.
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext context) => HomePage()));
                         },
                       ),
                     ),

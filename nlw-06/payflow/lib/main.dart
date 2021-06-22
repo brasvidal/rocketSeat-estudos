@@ -4,7 +4,6 @@ import 'package:payflow/modules/login/login_page.dart';
 import 'package:payflow/modules/splash/splash_page.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 
-import 'modules/teste/teste.dart';
 
 void main() {
   runApp(AppWidget());
@@ -17,6 +16,6 @@ class AppWidget extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Pay Flow',
         theme: ThemeData(primaryColor: AppColors.primary),
-        home: HomePage());
+        home: SplashPage());
   }
 }
