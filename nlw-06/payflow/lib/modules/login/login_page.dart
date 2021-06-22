@@ -60,9 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                           const EdgeInsets.only(left: 40, right: 40, top: 40),
                       child: SocialLoginButton(
                         onTap: () {
-                        //navegação temporária.
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (BuildContext context) => HomePage()));
+                      print('click');
                         },
                       ),
                     ),
