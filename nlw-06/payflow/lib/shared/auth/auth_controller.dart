@@ -9,7 +9,7 @@ class AuthController {
 
   get user => _user;
 
-  void setUser(BuildContext context, var user) {
+ void  setUser(BuildContext context, var user) {
     if (user != null) {
       _user = user;
       _isAuthenticated = true;
