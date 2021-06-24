@@ -3,20 +3,20 @@
  <img src="https://i.imgur.com/Nq0LAMX.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">NLW PayFlow</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/brasvidal/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/brasvidal/The-Documentation-Compendium/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/brasvidal/The-Documentation-Compendium.svg)](https://github.com/brasvidal/The-Documentation-Compendium/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/brasvidal/The-Documentation-Compendium.svg)](https://github.com/brasvidal/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> Payflow, Um app desenvolvido em aula Rocketseat
     <br> 
 </p>
 
@@ -34,37 +34,20 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Este projeto foi desenvolvido durante a Next level Week da Rocketseat 
+No período de 21/06/2021 a 27/06/2021
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Prerequisitos
 
-What things you need to install the software and how to install them.
+Um computador, Flutter e Java instalados
 
 ```
 Give examples
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
