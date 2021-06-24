@@ -1,99 +1,99 @@
 import 'package:flutter/material.dart';
+import 'package:payflow/modules/home/home_controller.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
-import 'package:payflow/shared/themes/app_images.dart';
 import 'package:payflow/shared/themes/app_text_styles.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key? key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final controller = HomeController();
+  final pages = [
+    Container(
+      color: Colors.red,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: AppColors.background,
-        body: Container(
-          width: size.width,
-          height: size.height,
-          child: Stack(
-            children: [
-              Container(
-                width: size.width,
-                height: size.height * .36,
-                color: AppColors.primary,
-                child: Padding(
-                  padding: const EdgeInsets.only(right: 24, left: 24,top:65),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      
-                       Text.rich(
-                         
-                          TextSpan(children: <TextSpan>[
-                            TextSpan(
-                                text: 'Olá, ',
-                                style: TextStyles.captionShape),
-                            TextSpan(
-                                text: 'Marcos',
-                                style: TextStyles.titleBoldBackground),
-                            TextSpan(
-                                text: '\nMantenha suas Contas em Dia',
-                                style: TextStyles.captionShape),
-                          ]),
-                        ),
-                        Container(
-                          width: 60,
-                          height: 60,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                              image: NetworkImage('https://pbs.twimg.com/profile_images/1405138613998821378/xkZRU-mY_400x400.jpg')
-                              ,),
-                          ),
-                          
-                        )
-                    ],
-                  ),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(152),
+        child: Container(
+          height: 152,
+          color: AppColors.primary,
+          child: Center(
+            child: ListTile(
+              title: Text.rich(TextSpan(children: <TextSpan>[
+                TextSpan(text: ('Olá '), style: TextStyles.captionShape),
+                TextSpan(
+                    text: ('Marcos' + ','),
+                    style: TextStyles.titleBoldBackground),
+              ])),
+              subtitle: Text(
+                'Mantenha suas contas em dia',
+                style: TextStyles.captionShape,
+              ),
+              trailing: Container(
+                height: 48,
+                width: 48,
+                decoration: BoxDecoration(
+                  color: Colors.black,
+                  borderRadius: BorderRadius.circular(5),
                 ),
               ),
-              Positioned(
-                top: size.height * 0.3,
-                right: 27,
-                left: 27,
-                child: Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Image.asset(AppImages.logomini2),
-                      Container(
-                        width: 1,
-                        height: 32,
-                        color: Colors.white,
-                      ),
-                      Text.rich(
-                        TextSpan(children: <TextSpan>[
-                          TextSpan(
-                              text: 'Você tem ',
-                              style: TextStyles.captionShape),
-                          TextSpan(
-                              text: '14 boletos',
-                              style: TextStyles.captionBoldShape),
-                          TextSpan(
-                              text: '\ncadastrados para pagar.',
-                              style: TextStyles.captionShape),
-                        ]),
-                      ),
-                    ],
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: AppColors.gray,
-                  ),
-                  width: 327,
-                  height: 80,
-                ),
-              ),
-            ],
+            ),
           ),
-        ));
+        ),
+      ),
+      body: pages[controller.currentPage],
+      bottomNavigationBar: Container(
+        height: 90,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            IconButton(
+              onPressed: () {
+                controller.setPage(0);
+                setState(() {});
+              },
+              icon: Icon(Icons.home),
+              color: AppColors.primary,
+            ),
+            GestureDetector(
+              onTap: () {
+                print('Clicou');
+              },
+              child: Container(
+                  width: 56,
+                  height: 56,
+                  decoration: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Icon(
+                    Icons.add_box_outlined,
+                    color: AppColors.background,
+                  )),
+            ),
+            IconButton(
+              onPressed: () {
+                controller.setPage(1);
+                setState(() {});
+              },
+              icon: Icon(Icons.description_outlined),
+              color: AppColors.body,
+            ),
+            
+          ],
+        ),
+      ),
+    );
   }
 }
