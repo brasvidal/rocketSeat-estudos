@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       color: Colors.red,
     ),
     Container(
-      color: Colors.blue,      
+      color: Colors.blue,
     ),
   ];
 
@@ -27,7 +27,6 @@ class _HomePageState extends State<HomePage> {
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(152),
         child: Container(
-   
           height: 152,
           color: AppColors.primary,
           child: Center(
@@ -35,7 +34,8 @@ class _HomePageState extends State<HomePage> {
               title: Text.rich(TextSpan(children: <TextSpan>[
                 TextSpan(text: ('Olá '), style: TextStyles.captionShape),
                 TextSpan(
-                    text: ('Marcos'+','), style: TextStyles.titleBoldBackground),
+                    text: ('Marcos' + ','),
+                    style: TextStyles.titleBoldBackground),
               ])),
               subtitle: Text(
                 'Mantenha suas contas em dia',
@@ -47,7 +47,6 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(5),
-                  
                 ),
               ),
             ),
@@ -63,9 +62,7 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               onPressed: () {
                 controller.setPage(0);
-                setState(() {
-                  
-                });
+                setState(() {});
               },
               icon: Icon(Icons.home),
               color: AppColors.primary,
@@ -88,14 +85,12 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               onPressed: () {
                 controller.setPage(1);
-                setState(() {
-                  
-                });
+                setState(() {});
               },
               icon: Icon(Icons.description_outlined),
               color: AppColors.body,
-              
             ),
+            
           ],
         ),
       ),

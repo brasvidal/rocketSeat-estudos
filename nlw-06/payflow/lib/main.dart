@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:payflow/app_widget.dart';
-import 'package:payflow/modules/home/home_page.dart';
-import 'package:payflow/modules/login/login_page.dart';
-import 'package:payflow/modules/splash/splash_page.dart';
-import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() {
