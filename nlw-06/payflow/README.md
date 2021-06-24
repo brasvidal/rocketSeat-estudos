@@ -11,6 +11,7 @@
 [![GitHub Issues](https://img.shields.io/github/issues/brasvidal/The-Documentation-Compendium.svg)](https://github.com/brasvidal/rocketSeat-estudos/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/brasvidal/The-Documentation-Compendium.svg)](https://github.com/brasvidal/rocketSeat-estudos/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+1
 
 </div>
 
