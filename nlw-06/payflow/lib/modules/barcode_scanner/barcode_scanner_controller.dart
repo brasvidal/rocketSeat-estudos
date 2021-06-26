@@ -16,17 +16,13 @@ class BarcodeScannerController {
 
   InputImage? imagePicker;
 
-
   void getAvailableCameras() async {
     try {
       final response = await availableCameras();
       final camera = response.firstWhere(
           (element) => element.lensDirection == CameraLensDirection.back);
-      cameraController = CameraController(
-        camera,
-        ResolutionPreset.max,
-        enableAudio: false,
-      );
+      cameraController =
+          CameraController(camera, ResolutionPreset.max, enableAudio: false);
       await cameraController!.initialize();
       scanWithCamera();
       listenCamera();

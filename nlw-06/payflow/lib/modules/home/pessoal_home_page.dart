@@ -63,7 +63,7 @@ class PessoalHomePage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Image.asset(AppImages.logomini2),
+                      Image.asset(AppImages.logoFull),
                       Container(
                         width: 1,
                         height: 32,
@@ -86,7 +86,7 @@ class PessoalHomePage extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: AppColors.gray,
+                    color: AppColors.grey,
                   ),
                   width: 327,
                   height: 80,
